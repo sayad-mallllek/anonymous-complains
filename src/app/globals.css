@@ -6,7 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --border-color: #ffffff;
+  --background-color-hex: #c2bfbf;
+  --border-color: #e5e7eb;
   --paper-background-color: 255, 255, 255;
   --paper-text-color: 0, 0, 0;
   --paper-bg-image: url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
@@ -17,7 +18,8 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --border-color: #242323;
+    --background-color-hex: #11172a;
+    --border-color: #374151;
     --paper-background-color: 0, 0, 0;
     --paper-text-color: 255, 255, 255;
     --paper-bg-image: url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
@@ -26,106 +28,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: --background-color-hex;
+
+
 }
 
-button {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+textarea {
+  border: 1px solid var(--border-color);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-
-#paper {
-  color: #FFF;
-  font-size: 20px;
-}
-
-#margin {
-  margin-left: 12px;
-  margin-bottom: 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-#text {
-  background-color: var(rgb(--paper-background-color));
-  color: rgb(var(--paper-text-color));
-  font-family: Courier, monospace;
-  font-weight: normal;
-  font-size: 24px;
-  resize: none;
-  line-height: 40px;
-  padding-left: 100px;
-  padding-right: 30px;
-  padding-top: 45px;
-  padding-bottom: 34px;
-  background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
-  background-repeat: repeat-y, repeat-x;
-  -webkit-border-radius: 12px;
-  border-radius: 12px;
-  -webkit-box-shadow: 0px 2px 14px #000;
-  box-shadow: 0px 2px 14px #000;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
-  border: 1px solid var(--border-color);
-
-  @media (prefers-color-scheme: dark) {
-    background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://i.pinimg.com/originals/6c/d6/3c/6cd63ca9a29c5e0cd879f594c89251de.jpg);
-  }
-}
-
-#button {
-  cursor: pointer;
-  margin-top: 20px;
-  float: right;
-  height: 40px;
-  padding-left: 24px;
-  padding-right: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: #FFF;
-  text-shadow: 0px -1px 0px #000000;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  border-top: 1px solid #FFF;
-  -webkit-box-shadow: 0px 2px 14px #000;
-  box-shadow: 0px 2px 14px #000;
-  background-color: #62add6;
-  background-image: url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
-  background-repeat: repeat-x;
-}
-
-#button:active {
-  zoom: 1;
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-}
-
-#button:focus {
-  zoom: 1;
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-}
-
-#wrapper {
-  width: 700px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 24px;
-  margin-bottom: 100px;
 }
