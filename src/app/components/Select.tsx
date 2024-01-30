@@ -3,11 +3,12 @@ interface Props {
 }
 
 const options = [
+  { value: "sara-kassem", label: "Sara Kassem (Recommended)" },
   { value: "ali-ghazleh", label: "Ali Ghazleh" },
   { value: "ali-kanso", label: "Ali Kanso" },
   { value: "ali-nouriddine", label: "Ali Nouriddine" },
   { value: "ibrahim-elzein", label: "Ibrahim ElZein" },
-  { value: "sara-kassem", label: "Sara Kassem (Recommended)" },
+  { value: "ibrahim-rubaie", label: "Ibrahim Rubaie" },
   { value: "albert-geokgeuzian", label: "Albert Geokgeuzian", disabled: true },
   { value: "zeina-olabi", label: "Zeina Olabi" },
   { value: "ahmad-elyoussef", label: "Ahmad ElYoussef" },
@@ -16,6 +17,12 @@ const options = [
   { value: "jad-yehya", label: "Jad Yehya" },
   { value: "karim-tabikh", label: "Karim Tabikh" },
   { value: "mohammed-hawa", label: "Mohammed Hawa" },
+  { value: "layla-abdulrahman", label: "Layla Abdulrahman" },
+  { value: "nesrine-salameh", label: "Nesrine Salameh" },
+  { value: "mohammad-nassar", label: "Mohammad Nassar" },
+  { value: "lina-annan", label: "Lina Annan" },
+  { value: "layal-moti", label: "Layal Moti" },
+  { value: "yuri-allam", label: "Yuri Allam" },
 ];
 
 const Select = ({ name }: Props) => {
@@ -36,11 +43,11 @@ const Select = ({ name }: Props) => {
     "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
   }'
         >
-          <option value="">Choose</option>
-          <option>Name</option>
-          <option>Email address</option>
-          <option>Description</option>
-          <option>User ID</option>
+          {options.map(({ label, ...rest }) => (
+            <option {...rest} key={rest.value}>
+              {label}
+            </option>
+          ))}
         </select>
 
         <div className="absolute top-1/2 end-2.5 -translate-y-1/2">
@@ -52,9 +59,9 @@ const Select = ({ name }: Props) => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="m7 15 5 5 5-5" />
             <path d="m7 9 5-5 5 5" />

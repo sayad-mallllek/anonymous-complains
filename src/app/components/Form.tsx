@@ -9,7 +9,6 @@ const Form = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
-    console.log(data);
 
     fetch("/api/message", {
       method: "POST",
@@ -18,11 +17,11 @@ const Form = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 min-w-56 sm:min-w-96">
         <Select name="person" />
         <TextArea name="comment" />
         <button
-          type="button"
+          type="submit"
           className="py-3 px-4 max-w-24 mx-auto inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
         >
           Complain
