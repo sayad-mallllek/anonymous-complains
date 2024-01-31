@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import PrelineScript from "./scripts/preline";
+import { APPLICATION_VERSION } from "@/utils/general";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-white dark:bg-slate-900`}>
         <PrelineScript />
         {children}
+        <span className="fixed left-2 bottom-2 text-blue-400 opacity-70 text-xs">
+          V {APPLICATION_VERSION}
+        </span>
       </body>
     </html>
   );

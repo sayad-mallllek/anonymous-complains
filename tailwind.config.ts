@@ -14,6 +14,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        "slide-in-left": "slide-in-left 500ms ease-in-out",
+        "slide-out-left": "slide-out-left 500ms ease-in-out",
+      },
+      keyframes: {
+        "slide-in-left": {
+          "0%": { transform: "translateX(-100%)" },
+          "80%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "slide-out-left": {
+          "0%": { transform: "translateX(0)" },
+          "80%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [require("preline/plugin")],
