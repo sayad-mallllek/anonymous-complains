@@ -17,13 +17,13 @@ export default function PrelineScript() {
     import("preline/preline");
   }, []);
 
-  if (typeof window !== "undefined") {
-    useEffect(() => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
       setTimeout(() => {
         window.HSStaticMethods.autoInit();
       }, 100);
-    }, [path, window.HSStaticMethods]);
-  }
+    }
+  }, [path, window.HSStaticMethods]);
 
   return null;
 }
