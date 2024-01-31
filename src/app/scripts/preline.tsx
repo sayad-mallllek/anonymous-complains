@@ -23,7 +23,7 @@ export default function PrelineScript() {
         window.HSStaticMethods.autoInit();
       }, 100);
     }
-  }, [path, window.HSStaticMethods]);
+  }, [path]);
 
   return null;
 }
