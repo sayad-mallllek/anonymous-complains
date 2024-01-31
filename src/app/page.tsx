@@ -7,7 +7,7 @@ export default function Home() {
         Anonymous Complaints
       </h1>
       <h2 className="text-xl text-center text-gray-500 dark:text-gray-400 mb-6 sm:mb-12">
-        Send a complaint towards the person who annoys the most, and we'll
+        Send a complaint towards the person who annoys the most, and we&apos;ll
         handle it ;)
       </h2>
       <Form />
