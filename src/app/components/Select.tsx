@@ -6,25 +6,29 @@ interface Props {
 
 const options = [
   { value: "sara-kassem", label: "Sara Kassem (Recommended)" },
+  { value: "abdullah-alhouda", label: "Abdullah AlHouda" },
+  { value: "ahmad-elyoussef", label: "Ahmad ElYoussef" },
+  { value: "albert-geokgeuzian", label: "Albert Geokgeuzian", disabled: true },
   { value: "ali-ghazleh", label: "Ali Ghazleh" },
-  { value: "ali-kanso", label: "Ali Kanso" },
+  { value: "ali-kanso", label: "Ali Kanso", disabled: true },
   { value: "ali-nouriddine", label: "Ali Nouriddine" },
+  { value: "charbel-hawat", label: "Charbel Hawat" },
+  { value: "ehab-maatouk", label: "Ehab Maatouk" },
+  { value: "hasan-hmedeh", label: "Hasan Hmedeh" },
+  { value: "huda-alzahabi", label: "Huda AlZahabi" },
   { value: "ibrahim-elzein", label: "Ibrahim ElZein" },
   { value: "ibrahim-rubaie", label: "Ibrahim Rubaie" },
-  { value: "albert-geokgeuzian", label: "Albert Geokgeuzian", disabled: true },
-  { value: "zeina-olabi", label: "Zeina Olabi" },
-  { value: "ahmad-elyoussef", label: "Ahmad ElYoussef" },
-  { value: "abdullah-alhouda", label: "Abdullah AlHouda" },
-  { value: "huda-alzahabi", label: "Huda AlZahabi" },
   { value: "jad-yehya", label: "Jad Yehya" },
   { value: "karim-tabikh", label: "Karim Tabikh" },
-  { value: "mohammed-hawa", label: "Mohammed Hawa" },
-  { value: "layla-abdulrahman", label: "Layla Abdulrahman" },
-  { value: "nesrine-salameh", label: "Nesrine Salameh" },
-  { value: "mohammad-nassar", label: "Mohammad Nassar" },
-  { value: "lina-annan", label: "Lina Annan" },
   { value: "layal-moti", label: "Layal Moti" },
+  { value: "layla-abdulrahman", label: "Layla Abdulrahman" },
+  { value: "lina-annan", label: "Lina Annan" },
+  { value: "mahdi-alkomaiha", label: "Mahdi Al Komaiha" },
+  { value: "mohammed-hawa", label: "Mohammed Hawa" },
+  { value: "nesrine-salameh", label: "Nesrine Salameh" },
   { value: "yuri-allam", label: "Yuri Allam" },
+  { value: "mohammad-nassar", label: "Mohammad Nassar" },
+  { value: "zeina-olabi", label: "Zeina Olabi" },
 ];
 
 const Select = ({ name }: Props) => {
@@ -61,7 +65,9 @@ const Select = ({ name }: Props) => {
     "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
   }'
         >
-          <option value={""}>Choose the annoying person...</option>
+          <option value={""} selected>
+            Choose the annoying person...
+          </option>
           {options.map(({ label, ...rest }) => (
             <option
               className="disabled:opacity-50 disabled:pointer-events-none"

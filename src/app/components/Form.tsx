@@ -12,7 +12,7 @@ const Form = () => {
   } | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleClearToast = () => setTimeout(() => setToast(null), 500);
+  const handleClearToast = () => setTimeout(() => setToast(null), 1500);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -31,12 +31,12 @@ const Form = () => {
       method: "POST",
       body: JSON.stringify(data),
     })
-      .then(() =>
+      .then(() => {
         setToast({
           status: "success",
           message: "Your complaint has been submitted successfully!",
-        })
-      )
+        });
+      })
       .catch((err) =>
         setToast({
           status: "error",
