@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@elasticemail/elasticemail-client-ts-axios": "^4.0.22",
     "@neondatabase/serverless": "^0.7.2",
     "@preline/select": "^2.0.2",
     "firebase": "^10.7.2",
